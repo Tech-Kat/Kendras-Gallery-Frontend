@@ -4,9 +4,10 @@ import PaintingDetail from '../Components/PaintingDetail'
 const Show = () => {
   return (
     <div>
-      <PaintingDetail />
+       <h1>Gallery</h1>
+      <PaintingDetail /> 
     </div>
   )
 }
 
-export default Show
+export default Show;
