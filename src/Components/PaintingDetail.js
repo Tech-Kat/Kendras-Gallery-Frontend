@@ -6,8 +6,8 @@ const API = process.env.REACT_APP_API_URL;
 
 const PaintingDetail = () => {
   const [details, setDetails] = useState([]);
-//   const { name, artist, price, size, is_available, description, image } =
-//     details;
+  //   const { name, artist, price, size, is_available, description, image } =
+  //     details;
   let { id } = useParams();
   let navigate = useNavigate();
 
@@ -22,7 +22,7 @@ const PaintingDetail = () => {
       });
   }, [id, navigate]);
 
-const deletePainting = () => {
+  const deletePainting = () => {
     axios
       .delete(`${API}/paintings/${id}`)
       .then(() => {
@@ -38,26 +38,34 @@ const deletePainting = () => {
     <article>
       <div className="card-info">
         <h1>{details.name}</h1>
-        <img src={details.image} alt={details.name} height="200px" width="200px" />
+        <br />
+        <img
+          src={details.image}
+          alt={details.name}
+          height="200px"
+          width="200px"
+        />
+        <br />
         <h2>By:{details.artist}</h2>
-        <h3>Inspiration: {details.description}</h3>
-        <h1>P{details.size}</h1>
-        <h2>{details.price}</h2>
+        <br />
+        <h1>Size:{details.size}</h1>
+        <br/>
+        <h2>Price:{details.price}</h2>
+        <br/>
         <h2>{details.is_available}</h2>
       </div>
       <div>
-      <Link to={`/paintings`}>
-              <button>Back</button>
-            </Link>
-          </div>
-          <div>
-            <Link to={`/paintings/${id}/edit`}>
-              <button>Edit</button>
-            </Link>
-          </div>
-          <div>
-            <button onClick={handleDelete}>Delete</button>
-          
+        <Link to={`/paintings`}>
+          <button>Back</button>
+        </Link>
+      </div>
+      <div>
+        <Link to={`/paintings/${id}/edit`}>
+          <button>Edit</button>
+        </Link>
+      </div>
+      <div>
+        <button onClick={handleDelete}>Delete</button>
       </div>
     </article>
   );

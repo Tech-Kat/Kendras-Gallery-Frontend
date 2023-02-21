@@ -33,27 +33,29 @@ const Pagination = () => {
     .slice(pagesVisited, pagesVisited + paintingsPerPage)
     .map((d) => {
       return (
-        <div className="one-card" key={d.id}>
-          <Link to={`/paintings/${d.id}`}>
-            <img
-              className="pic-img"
-              src={d.image}
-              alt={`${d.name} img`}
-              width="150px"
-            />
-          </Link>
-          <br />
-          <div className="index-info">
+        <div >
+          <div className="one-card" key={d.id}>
+            <Link to={`/paintings/${d.id}`}>
+              <img
+                className="pic-img"
+                src={d.image}
+                alt={`${d.name} img`}
+                width="150px"
+              />
+            </Link>
             <br />
-            <h3> {d.name} </h3>
-            <br />
+            <div className="index-info">
+              <br />
+              <h3> {d.name} </h3>
+              <br />
+            </div>
           </div>
         </div>
       );
     });
 
   return (
-    <div>
+    <div className="display-cards">
       {displayPaintings}
       <ReactPaginate
         previousLabel={"Previous"}

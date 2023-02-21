@@ -5,7 +5,7 @@ const Home = () => {
     <div>
       <div class="d-flex flex-column justify-content-center w-100 h-100">
         <div class="d-flex flex-column justify-content-center align-items-center">
-          <div class="btn-group my-5"><h1></h1></div>
+          <div class="btn-group my-5"></div>
         </div>
       </div>
     </div>

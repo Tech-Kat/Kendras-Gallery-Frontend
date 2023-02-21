@@ -1,13 +1,12 @@
 import React from "react";
-
-import Paintings from "../Components/Paintings";
+import Pagination from "../Components/Pagination";
 
 const Index = () => {
   return (
     <div>
       <h1>Gallery</h1>
-      <Paintings />
-   
+      
+      <Pagination />
     </div>
   );
 };

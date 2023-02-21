@@ -2,14 +2,13 @@
 
 import React from "react";
 import { Link } from "react-router-dom";
-import Search from "./Search";
-import colorfeather from "../assets/colorfeather.png"
+import colorfeather from "../assests/colorfeather.png"
 
 
 const NavBar = () => {
   return (
     <div className="nav">
-      <Link to="/paintings">
+      <Link to="/">
         <img
           className="feather"
           src={colorfeather}
@@ -17,14 +16,14 @@ const NavBar = () => {
         />
       </Link>
 
-      <Link to="/">
-        <button>Home</button>
+      <Link to="/paintings">
+        <button className="nav-bttn">Gallery</button>
       </Link>
 
       <Link to="/paintings/new">
-        <button>New Painting</button>
+        <button className="nav-bttn">New Painting</button>
       </Link>
-      <Search/>
+     
     </div>
   );
 };
