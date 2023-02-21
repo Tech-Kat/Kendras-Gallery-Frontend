@@ -1,11 +1,13 @@
 import React from "react";
-import Pagination from "../Components/Pagination";
 
 const Home = () => {
   return (
     <div>
-      <h1> Kendra's World Gallery </h1>
-      <Pagination/>
+      <div class="d-flex flex-column justify-content-center w-100 h-100">
+        <div class="d-flex flex-column justify-content-center align-items-center">
+          <div class="btn-group my-5"><h1></h1></div>
+        </div>
+      </div>
     </div>
   );
 };
